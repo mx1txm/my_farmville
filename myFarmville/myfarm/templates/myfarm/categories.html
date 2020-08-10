@@ -1,0 +1,194 @@
+{% extends "myfarm/base.html" %}
+
+{% block content %}
+<!-- Page Content -->
+<div>
+    <h3>Filter Product</h3>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <div class="input-group">
+                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Title contains...">
+                    <span class="input-group-append">
+                        <div class="input-group-text bg-transparent">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Category</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="0">Fruits</option>
+                    <option value="1">Vegetables</option>
+                    <option value="2">Nuts</option>
+                    <option value="3">legumes</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputState">Product</label>
+                <select id="inputState2" class="form-control">
+                    <option selected>Choose...</option>
+                    <option value="0">apple</option>
+                    <option value="1">banana</option>
+                    <option value="2">orange</option>
+                    <option value="3">strawberry</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputEmail1">Price Min $</label>
+                <input type="number" class="form-control" id="inputEmail1" placeholder="Price Min">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword2">Price Max $</label>
+                <input type="number" class="form-control" id="inputPassword2" placeholder="Price Max">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputEmail3">Menge Min</label>
+                <input type="number" class="form-control" id="inputEmail3" placeholder="Menge Min">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword4">Menge Max</label>
+                <input type="number" class="form-control" id="inputPassword4" placeholder="Menge Max">
+            </div>
+        </div>
+
+        <!-- <div class="form-group" style="display: inline"> -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="publishDateMin">Publish date minimum</label>
+                <input type="date" class="form-control" id="publishDateMin" value="YYYY-MM-DD">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="publishDateMax">Publish date maximum</label>
+                <input type="date" class="form-control" id="publishDateMax" value="YYYY-MM-DD">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <div>
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    GMO Free
+                </label>
+                </div>
+                <div>
+                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                <label class="form-check-label" for="gridCheck">
+                    Organic
+                </label>
+                </div>
+                <div>
+                <input class="form-check-input" type="checkbox" id="gridCheck3">
+                <label class="form-check-label" for="gridCheck">
+                    Fair trade
+                </label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="container col-lg-12">
+
+        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Categories</h1>
+
+        <hr class="mt-2 mb-5">
+
+        <div class="row text-center text-lg-center">
+
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/JI5VdAD2mAo/400x300" alt="">
+                    <label>Fruits</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/QvkAQTNj4zk/400x300" alt="">
+                    <label>Vegetables</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/tZlPXgFVQ6A/400x300" alt="">
+                    <label>Nuts</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/t4X660oKiYs/400x300" alt="">
+                    <label>Legumes</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ZhA9vZQPTeE/400x300" alt="">
+                    <label>Honey</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/cdcEW3izjOQ/400x300" alt="">
+                    <label>Allium (Onion&Garlic)</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/fqkrXYMosT4/400x300" alt="">
+                    <label>Berries</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/d5xQVtmTUeo/400x300" alt="">
+                    <label>Fresh Herbs & salad</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/VVe3zOZM88E/400x300" alt="">
+                    <label>Spices</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/59Kh3TAajg0/400x300" alt="">
+                    <label>Tea</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/uOBApnN_K7w/400x300" alt="">
+                    <label>Oil</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ygUgmmV8vB8/400x300" alt="">
+                    <label>Grains</label>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c1a32272cb.js" crossorigin="anonymous"></script>
+
+<!-- /.container -->
+{% endblock content %}
