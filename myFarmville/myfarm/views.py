@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Post
+from .forms import FilterForm
 
 
 # Create your views here.
@@ -12,8 +13,18 @@ def home(request):
     return render(request, 'myfarm/home.html', context)
     #Alternative: HttpResponse('<h1>Django Test Home<h1>')
 
+def about(request):
+    return render(request, 'myfarm/about.html', {'title': 'About'})
+
 def categories(request):
     return render(request, 'myfarm/categories.html')
+
+def fruits(request):
+    return render(request, 'myfarm/category/fruits.html')
+
+def vegetable(request):
+    return render(request, 'myfarm/category/vegetable.html')
+
 
 class PostListView(ListView):
     model = Post
@@ -23,7 +34,6 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -57,6 +67,27 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
-def about(request):
-    return render(request, 'myfarm/about.html', {'title': 'About'})
-    #return HttpResponse('<h1>Django Test About <h1>')
+class FilterView(TemplateView):
+    template_name = 'myfarm/filter.html'
+
+    def filter(self, request): #get request
+        form = FilterForm()
+        posts = Post.objects.all()
+        print(posts)
+        print("inside def filter / Get request")
+            #return render(request, 'myfarm/filter.html')
+        return render(request, self.template_name, {'form': form})
+            #return render(request, self.template_name, )
+
+    def post(self, request):
+        form = FilterForm(request.POST)
+        if form.is_valid():
+            text = form.cleaned_data['post']
+            post = form.save()
+            post.save()
+            form = FilterForm()
+            post = form.save()
+            return redirect('filter:filter')
+
+        args = {'form' : form}
+        return render(request, self.template_name, args)

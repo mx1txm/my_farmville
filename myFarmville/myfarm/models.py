@@ -11,7 +11,9 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField(default='SOME STRING')
     date_posted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    post = models.CharField(max_length=100, default='SOME STRING')
+    #user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     category_choices= (
         ('Fruits', 'Veggies'),

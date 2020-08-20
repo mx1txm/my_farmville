@@ -4,7 +4,7 @@
 <!-- Page Content -->
 <div>
     <h3>Filter Product</h3>
-    <form method="GET">
+    <form>
         <div class="form-row">
             <div class="form-group col-md-12">
                 <div class="input-group">
@@ -100,27 +100,6 @@
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
-    <!-- Listing for filtered posts -->
-    <div class="container">
-    <div class="row">
-        <div>
-            {% for post in posts %}
-            <article class="media content-section">
-                <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
-                <div class="media-body">
-                    <div class="article-metadata">
-                        <a class="mr-2" href="#">{{ post.author }}</a>
-                        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
-                    </div>
-                    <h2><a class="article-title" href="{% url 'myfarm-detail' post.id %}">{{ post.title }}</a></h2>
-                    <p class="article-content">{{ post.content }}</p>
-                </div>
-            </article>
-            {% endfor %}
-        </div>
-    </div>
-    </div>
-<!-- until here -->
     <div class="container col-lg-12">
 
         <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Categories</h1>
@@ -130,75 +109,75 @@
         <div class="row text-center text-lg-center">
 
             <div class="col-lg-4 col-md-4 col-4">
-                <a href="/fruits" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/JI5VdAD2mAo/400x300" alt="">
-                    <label>Fruits</label>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-4">
-                <a href="/vegetable" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/QvkAQTNj4zk/400x300" alt="">
-                    <label>Vegetables</label>
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/wXuzS9xR49M/400x300" alt="">
+                    <label>Apple</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/tZlPXgFVQ6A/400x300" alt="">
-                    <label>Nuts</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ZoezRpTLpbQ/400x300" alt="">
+                    <label>Apricot</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/t4X660oKiYs/400x300" alt="">
-                    <label>Legumes</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/e2HMVL4t3ys/400x300" alt="">
+                    <label>Banana</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ZhA9vZQPTeE/400x300" alt="">
-                    <label>Honey</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/_xN7UbcZ33I/400x300" alt="">
+                    <label>Cherry</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/cdcEW3izjOQ/400x300" alt="">
-                    <label>Allium (Onion&Garlic)</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/hlqPQEL_KmE/400x300" alt="">
+                    <label>Fig</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/fqkrXYMosT4/400x300" alt="">
-                    <label>Berries</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/F_ilCik66Hg/400x300" alt="">
+                    <label>Grape</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/d5xQVtmTUeo/400x300" alt="">
-                    <label>Fresh Herbs & salad</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/TFqjlTmkeyY/400x300" alt="">
+                    <label>Watermelon</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/VVe3zOZM88E/400x300" alt="">
-                    <label>Spices</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/kgkhD_kPSzQ/400x300" alt="">
+                    <label>Oranges</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/59Kh3TAajg0/400x300" alt="">
-                    <label>Tea</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/rje6ZcExHrM/400x300" alt="">
+                    <label>Peach</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/uOBApnN_K7w/400x300" alt="">
-                    <label>Oil</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/lElegSg89Ds/400x300" alt="">
+                    <label>Watermelon</label>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-4">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/ygUgmmV8vB8/400x300" alt="">
-                    <label>Grains</label>
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/VgCDU8K5l_E/400x300" alt="">
+                    <label>Pear</label>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-4">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/IeEFsajuORc/400x300" alt="">
+                    <label>Strawberry</label>
                 </a>
             </div>
         </div>
